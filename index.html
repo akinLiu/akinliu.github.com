@@ -177,15 +177,6 @@
 
     
     
-      
-      
-        
-        
-        
-      
-
-      
-    
 
     
       
@@ -256,6 +247,93 @@
 <p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2013/10/27/cocoapods/" itemprop="url">
+                  cocoapods
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            發表於
+            <time itemprop="dateCreated" datetime="2013-10-27T18:07:17+08:00" content="2013-10-27">
+              2013-10-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p><a href="http://cocoapods.org/" title="CocoaPods" target="_blank" rel="external">CocoaPods</a> is a tool for managing dependecies for iOS and Mac OS X projects.</p>
+<p><a href="http://cocoapods.org/" title="started" target="_blank" rel="external">Getting started</a> with using CocoaPods is easy. The tricky part is getting used to opening Xcode workspace (eg. <code>App.xcworkspace</code>) instead of Xocde project. But that’s not what I want to covered in this post.</p>
+<p>One of the hurdle I encountered is getting unit testing to work after CocoaPods is setup.<br>Apparently, after you setup CocoaPods, it automatically configures your project’s main target to use the pods (dependecies). However, it does not configure the same for your unit tests target. So when you run your unit test, you will likely encounter errors like this:</p>
+<pre><code>SomeLibrary<span class="class">.h</span> not found
+</code></pre><p>To fix, go to <strong>Project</strong> &gt; <strong>Info</strong> &gt; <strong>Configurations</strong> &gt; <strong>change</strong></p>
+<p><code>Based on Configuration</code> File to <code>Pods</code>. Like this: </p>
+<p><img src="http://img3.tuchuang.org/uploads/2013/10/configpod.png" alt=""></p>
 
             
           </span>

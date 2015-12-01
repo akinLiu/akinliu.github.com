@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自由分享]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://akuan.me/"/>
-  <updated>2015-12-01T10:57:22.000Z</updated>
+  <updated>2015-12-01T11:14:49.000Z</updated>
   <id>http://akuan.me/</id>
   
   <author>
@@ -18,9 +18,9 @@
     <title></title>
     <link href="http://akuan.me/2015/12/01/ios-rsa/"/>
     <id>http://akuan.me/2015/12/01/ios-rsa/</id>
-    <published>2015-12-01T10:57:22.000Z</published>
-    <updated>2015-12-01T10:57:22.000Z</updated>
-    <content type="html"><![CDATA[<p>title: ios rsa<br>date: 2015-12-01 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
+    <published>2015-12-01T11:14:49.000Z</published>
+    <updated>2015-12-01T11:14:49.000Z</updated>
+    <content type="html"><![CDATA[<p>title: ios rsa<br>date: 2014-02-27 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
 <p>—<a href="http://www.baike.com/wiki/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="external">RSA介绍</a><br>非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密</p>
 <p>由于iOS原生没有对rsa的支持，但有对openssl的支持</p>
 <p>在mac os x上使用命令生成公钥 私钥</p>
@@ -37,7 +37,7 @@
 <p>客户端加密 使用了 <a href="https://github.com/xjunior/XRSA" target="_blank" rel="external">github 开源的一个xrsa</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>title: ios rsa<br>date: 2015-12-01 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
+    <![CDATA[<p>title: ios rsa<br>date: 2014-02-27 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
 <p>—<a href="http://www.baike.com/wiki/RSA%E5%8A%]]>
     </summary>
     

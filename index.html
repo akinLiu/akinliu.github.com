@@ -202,6 +202,101 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/01/hexo-setup/" itemprop="url">
+                  使用gitcafe hexo搭建博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-01T17:56:00+08:00" content="2015-12-01">
+              2015-12-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="安装nvm">安装nvm</h1><p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
+<p>或者</p>
+<p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
+<h1 id="安装nodejs">安装nodejs</h1><p><code>nvm install 5.1</code> 5.1.x的稳定版本可以被安装，也可以换成其他稳定版</p>
+<p>启用nodejs</p>
+<p><code>nvm use 5.1</code> 对应你安装的</p>
+<h1 id="安装_Hexo">安装 Hexo</h1><p><code>npm install -g hexo-cli</code> </p>
+<p>初始化Hexo<br><code>hexo init &lt;folder&gt;</code><br><code>cd &lt;folder&gt;</code><br><code>npm install</code><br>当前目录结构应该为：<br>    .<br>    ├── _config.yml<br>    ├── package.json<br>    ├── scaffolds<br>    ├── scripts<br>    ├── source<br>    |   ├── _drafts<br>    |   └── _posts<br>    └── themes</p>
+<h1 id="配置_config-yml">配置_config.yml</h1><p>注意：<br>    1.修改配置文件时注意YAML语法，参数冒号:后一定要留空格<br>    2.中文乱码请修改文件编码格式为UTF-8<br>deploy 配置<br>    deploy:<br>    type: git<br>    repository: git@gitcafe.com:akuandev/akuandev.git<br>    branch: gitcafe-pages<br>需要在gitcafe 创建和用户名相同的仓库</p>
+<h1 id="域名设置：">域名设置：</h1><p>在gitcafe的项目设置中选择<code>page服务</code><br>添加自定义域名<br><img src="http://7xoiw5.com1.z0.glb.clouddn.com/gitcafe.png" alt=""></p>
+<h3 id="域名解析设置">域名解析设置</h3><p>我使用的是dnspod 域名cname到gitcafe.io 需要几分钟的时间生效<br><img src="http://7xoiw5.com1.z0.glb.clouddn.com/dnspodcname.png" alt=""></p>
+<p>添加文章：<br>hexo new “title”<br>修改产生的markdown 文件<br>清楚缓存 <code>hexo clean</code><br>生成文章信息 <code>hexo g</code><br>部署 <code>hexo d</code></p>
+<p>ps:<br>问题1:nvm 重启失效  原因nodejs版本没有设置</p>
+<p>查找node版本<br>    ➜ node –version<br>        v5.1.0<br>设置默认版本<br>    nvm alias default 5.1</p>
+<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo官方安装指引</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/11/19/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -399,7 +494,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -413,7 +508,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

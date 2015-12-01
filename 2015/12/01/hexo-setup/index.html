@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CocoaPods,iOS,tutorial," />
+  <meta name="keywords" content="blog,hexo," />
 
 
 
@@ -53,20 +53,27 @@
 
 
 
-<meta name="description" content="CocoaPods is a tool for managing dependecies for iOS and Mac OS X projects.
-Getting started with using CocoaPods is easy. The tricky part is getting used to opening Xcode workspace (eg. App.xcworkspac">
+<meta name="description" content="安装nvmwget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+或者
+wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+安装nodejsnvm install 5.1 5.1.x的稳定版本可以被安装，也可以换成其他稳定版">
 <meta property="og:type" content="article">
-<meta property="og:title" content="unit tests with cocoapods">
-<meta property="og:url" content="http://akuan.me/2013/11/21/cocoapods/index.html">
+<meta property="og:title" content="使用gitcafe hexo搭建博客">
+<meta property="og:url" content="http://akuan.me/2015/12/01/hexo-setup/index.html">
 <meta property="og:site_name" content="阿宽的博客">
-<meta property="og:description" content="CocoaPods is a tool for managing dependecies for iOS and Mac OS X projects.
-Getting started with using CocoaPods is easy. The tricky part is getting used to opening Xcode workspace (eg. App.xcworkspac">
-<meta property="og:image" content="http://img3.tuchuang.org/uploads/2013/10/configpod.png">
-<meta property="og:updated_time" content="2015-11-21T10:13:57.000Z">
+<meta property="og:description" content="安装nvmwget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+或者
+wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+安装nodejsnvm install 5.1 5.1.x的稳定版本可以被安装，也可以换成其他稳定版">
+<meta property="og:image" content="http://7xoiw5.com1.z0.glb.clouddn.com/gitcafe.png">
+<meta property="og:image" content="http://7xoiw5.com1.z0.glb.clouddn.com/dnspodcname.png">
+<meta property="og:updated_time" content="2015-12-01T10:16:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="unit tests with cocoapods">
-<meta name="twitter:description" content="CocoaPods is a tool for managing dependecies for iOS and Mac OS X projects.
-Getting started with using CocoaPods is easy. The tricky part is getting used to opening Xcode workspace (eg. App.xcworkspac">
+<meta name="twitter:title" content="使用gitcafe hexo搭建博客">
+<meta name="twitter:description" content="安装nvmwget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+或者
+wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+安装nodejsnvm install 5.1 5.1.x的稳定版本可以被安装，也可以换成其他稳定版">
 
 
 
@@ -78,7 +85,7 @@ Getting started with using CocoaPods is easy. The tricky part is getting used to
   };
 </script>
 
-  <title> unit tests with cocoapods | 阿宽的博客 </title>
+  <title> 使用gitcafe hexo搭建博客 | 阿宽的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -198,7 +205,7 @@ Getting started with using CocoaPods is easy. The tricky part is getting used to
             
             
               
-                unit tests with cocoapods
+                使用gitcafe hexo搭建博客
               
             
           </h1>
@@ -207,8 +214,8 @@ Getting started with using CocoaPods is easy. The tricky part is getting used to
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2013-11-21T18:07:17+08:00" content="2013-11-21">
-              2013-11-21
+            <time itemprop="dateCreated" datetime="2015-12-01T17:56:00+08:00" content="2015-12-01">
+              2015-12-01
             </time>
           </span>
 
@@ -231,13 +238,21 @@ Getting started with using CocoaPods is easy. The tricky part is getting used to
       
 
       
-        <span itemprop="articleBody"><p><a href="http://cocoapods.org/" title="CocoaPods" target="_blank" rel="external">CocoaPods</a> is a tool for managing dependecies for iOS and Mac OS X projects.</p>
-<p><a href="http://cocoapods.org/" title="started" target="_blank" rel="external">Getting started</a> with using CocoaPods is easy. The tricky part is getting used to opening Xcode workspace (eg. <code>App.xcworkspace</code>) instead of Xocde project. But that’s not what I want to covered in this post.</p>
-<p>One of the hurdle I encountered is getting unit testing to work after CocoaPods is setup.<br>Apparently, after you setup CocoaPods, it automatically configures your project’s main target to use the pods (dependecies). However, it does not configure the same for your unit tests target. So when you run your unit test, you will likely encounter errors like this:</p>
-<pre><code>SomeLibrary<span class="class">.h</span> not found
-</code></pre><p>To fix, go to <strong>Project</strong> &gt; <strong>Info</strong> &gt; <strong>Configurations</strong> &gt; <strong>change</strong></p>
-<p><code>Based on Configuration</code> File to <code>Pods</code>. Like this: </p>
-<p><img src="http://img3.tuchuang.org/uploads/2013/10/configpod.png" alt=""></p>
+        <span itemprop="articleBody"><h1 id="安装nvm">安装nvm</h1><p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
+<p>或者</p>
+<p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
+<h1 id="安装nodejs">安装nodejs</h1><p><code>nvm install 5.1</code> 5.1.x的稳定版本可以被安装，也可以换成其他稳定版</p>
+<p>启用nodejs</p>
+<p><code>nvm use 5.1</code> 对应你安装的</p>
+<h1 id="安装_Hexo">安装 Hexo</h1><p><code>npm install -g hexo-cli</code> </p>
+<p>初始化Hexo<br><code>hexo init &lt;folder&gt;</code><br><code>cd &lt;folder&gt;</code><br><code>npm install</code><br>当前目录结构应该为：<br>    .<br>    ├── _config.yml<br>    ├── package.json<br>    ├── scaffolds<br>    ├── scripts<br>    ├── source<br>    |   ├── _drafts<br>    |   └── _posts<br>    └── themes</p>
+<h1 id="配置_config-yml">配置_config.yml</h1><p>注意：<br>    1.修改配置文件时注意YAML语法，参数冒号:后一定要留空格<br>    2.中文乱码请修改文件编码格式为UTF-8<br>deploy 配置<br>    deploy:<br>    type: git<br>    repository: git@gitcafe.com:akuandev/akuandev.git<br>    branch: gitcafe-pages<br>需要在gitcafe 创建和用户名相同的仓库</p>
+<h1 id="域名设置：">域名设置：</h1><p>在gitcafe的项目设置中选择<code>page服务</code><br>添加自定义域名<br><img src="http://7xoiw5.com1.z0.glb.clouddn.com/gitcafe.png" alt=""></p>
+<h3 id="域名解析设置">域名解析设置</h3><p>我使用的是dnspod 域名cname到gitcafe.io 需要几分钟的时间生效<br><img src="http://7xoiw5.com1.z0.glb.clouddn.com/dnspodcname.png" alt=""></p>
+<p>添加文章：<br>hexo new “title”<br>修改产生的markdown 文件<br>清楚缓存 <code>hexo clean</code><br>生成文章信息 <code>hexo g</code><br>部署 <code>hexo d</code></p>
+<p>ps:<br>问题1:nvm 重启失效  原因nodejs版本没有设置</p>
+<p>查找node版本<br>    ➜ node –version<br>        v5.1.0<br>设置默认版本<br>    nvm alias default 5.1</p>
+<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo官方安装指引</a></p>
 </span>
       
     </div>
@@ -246,11 +261,9 @@ Getting started with using CocoaPods is easy. The tricky part is getting used to
       
         <div class="post-tags">
           
-            <a href="/tags/CocoaPods/" rel="tag">#CocoaPods</a>
+            <a href="/tags/blog/" rel="tag">#blog</a>
           
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
-          
-            <a href="/tags/tutorial/" rel="tag">#tutorial</a>
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
           
         </div>
       
@@ -259,13 +272,13 @@ Getting started with using CocoaPods is easy. The tricky part is getting used to
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2015/11/19/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/19/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -404,7 +417,7 @@ Getting started with using CocoaPods is easy. The tricky part is getting used to
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装nvm"><span class="nav-number">1.</span> <span class="nav-text">安装nvm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装nodejs"><span class="nav-number">2.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装_Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置_config-yml"><span class="nav-number">4.</span> <span class="nav-text">配置_config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#域名设置："><span class="nav-number">5.</span> <span class="nav-text">域名设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#域名解析设置"><span class="nav-number">5.0.1.</span> <span class="nav-text">域名解析设置</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

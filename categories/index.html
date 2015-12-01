@@ -55,12 +55,13 @@
 
 <meta name="description" content="技术改变世界">
 <meta property="og:type" content="website">
-<meta property="og:title" content="阿宽的博客">
-<meta property="og:url" content="http://akuan.me/index.html">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://akuan.me/categories/index.html">
 <meta property="og:site_name" content="阿宽的博客">
 <meta property="og:description" content="技术改变世界">
+<meta property="og:updated_time" content="2015-12-01T10:57:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="阿宽的博客">
+<meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="技术改变世界">
 
 
@@ -73,7 +74,13 @@
   };
 </script>
 
-  <title> 阿宽的博客 </title>
+  <title>
+  
+
+  
+    分类 | 阿宽的博客
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -94,9 +101,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -183,134 +188,20 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
-    
-
+  <div id="posts" class="posts-expand">
     
     
-      
-      
-        
-        
-        
-      
-
-      
-    
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/01/cocoapods-mirror/" itemprop="url">
-                  cocoapods specs 镜像
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-01T18:58:02+08:00" content="2015-12-01">
-              2015-12-01
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
+      <div class="category-all-page">
+        <div class="category-all-title">
+            目前共计 1 个分类
         </div>
-      </header>
+        <div class="category-all">
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">2</span></li></ul>
+        </div>
+      </div>
     
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在<a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">gitcafe</a> 和 <a href="http://git.oschina.net/akuandev/Specs.git" target="_blank" rel="external">oschina</a> 现在每10分钟会进行一次同步 基本和主仓库保持一致</p>
-<p>使用方法：</p>
-<pre><code>pod repo remove <span class="keyword">master</span>
-<span class="title">pod</span> repo add <span class="keyword">master</span> <span class="title">https</span>://gitcafe.com/akuandev/Specs.git
-pod repo update
-</code></pre><p>如果想用oschina的镜像也可以把第二条命令 换成 <code>http://git.oschina.net/akuandev/Specs.git</code> 即可</p>
-<p>第二条命令执行的时候会比较耗时 这个时候要去把整个specs仓库clone一下 大概60M左右</p>
-<p>如果你还没有使用过coacoapods 这里有一份安装的介绍 <a href="http://blog.devtang.com/blog/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">cocoapods 使用</a></p>
-<p>如果不想在pod install pod update的时候不想升级specs库 可以使用参数忽略掉 </p>
-<pre><code>pod install --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span>
-pod <span class="keyword">update</span> --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span>
-</code></pre><p>由于pod 新版本更新 会导致重复clone 一份pod文件下来，解决方法 <code>Podfile</code>第一行加入 source ‘<a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">https://gitcafe.com/akuandev/Specs.git</a>‘ </p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-
-  </section>
-
-  
+  </div>
 
 
         </div>

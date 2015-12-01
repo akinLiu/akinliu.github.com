@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="cocoapods," />
 
 
 
@@ -53,19 +53,25 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在gitcafe 和 oschina 现在每10分钟会进行一次同步 基本和主仓库保持一致
+使用方法：
+pod repo remove master
+pod repo add master https://gitc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://akuan.me/2015/11/19/hello-world/index.html">
+<meta property="og:title" content="cocoapods specs 镜像">
+<meta property="og:url" content="http://akuan.me/2015/12/01/cocoapods-mirror/index.html">
 <meta property="og:site_name" content="阿宽的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-11-19T09:12:49.000Z">
+<meta property="og:description" content="在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在gitcafe 和 oschina 现在每10分钟会进行一次同步 基本和主仓库保持一致
+使用方法：
+pod repo remove master
+pod repo add master https://gitc">
+<meta property="og:updated_time" content="2015-12-01T11:12:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="cocoapods specs 镜像">
+<meta name="twitter:description" content="在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在gitcafe 和 oschina 现在每10分钟会进行一次同步 基本和主仓库保持一致
+使用方法：
+pod repo remove master
+pod repo add master https://gitc">
 
 
 
@@ -77,7 +83,7 @@ Quick">
   };
 </script>
 
-  <title> Hello World | 阿宽的博客 </title>
+  <title> cocoapods specs 镜像 | 阿宽的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -140,6 +146,16 @@ Quick">
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -197,7 +213,7 @@ Quick">
             
             
               
-                Hello World
+                cocoapods specs 镜像
               
             
           </h1>
@@ -206,11 +222,26 @@ Quick">
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-11-19T17:12:49+08:00" content="2015-11-19">
-              2015-11-19
+            <time itemprop="dateCreated" datetime="2015-12-01T18:58:02+08:00" content="2015-12-01">
+              2015-12-01
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -230,37 +261,42 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><p>在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在<a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">gitcafe</a> 和 <a href="http://git.oschina.net/akuandev/Specs.git" target="_blank" rel="external">oschina</a> 现在每10分钟会进行一次同步 基本和主仓库保持一致</p>
+<p>使用方法：</p>
+<pre><code>pod repo remove <span class="keyword">master</span>
+<span class="title">pod</span> repo add <span class="keyword">master</span> <span class="title">https</span>://gitcafe.com/akuandev/Specs.git
+pod repo update
+</code></pre><p>如果想用oschina的镜像也可以把第二条命令 换成 <code>http://git.oschina.net/akuandev/Specs.git</code> 即可</p>
+<p>第二条命令执行的时候会比较耗时 这个时候要去把整个specs仓库clone一下 大概60M左右</p>
+<p>如果你还没有使用过coacoapods 这里有一份安装的介绍 <a href="http://blog.devtang.com/blog/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">cocoapods 使用</a></p>
+<p>如果不想在pod install pod update的时候不想升级specs库 可以使用参数忽略掉 </p>
+<pre><code>pod install --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span>
+pod <span class="keyword">update</span> --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span>
+</code></pre><p>由于pod 新版本更新 会导致重复clone 一份pod文件下来，解决方法 <code>Podfile</code>第一行加入 source ‘<a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">https://gitcafe.com/akuandev/Specs.git</a>‘ </p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/cocoapods/" rel="tag">#cocoapods</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/11/21/cocoapods/" rel="next" title="unit tests with cocoapods">
-                <i class="fa fa-chevron-left"></i> unit tests with cocoapods
+              <a href="/2015/12/01/ios-rsa/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/01/hexo-setup/" rel="prev" title="使用gitcafe hexo搭建博客">
-                使用gitcafe hexo搭建博客 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -328,21 +364,21 @@ Quick">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">0</span>
+            <a href="/categories">
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">分类</span>
-              
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -399,7 +435,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="blog,hexo," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -53,27 +53,28 @@
 
 
 
-<meta name="description" content="安装nvmwget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-或者
-wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-安装nodejsnvm install 5.1 5.1.x的稳定版本可以被安装，也可以换成其他稳定版">
+<meta name="description" content="title: ios rsadate: 2015-12-01 18:52:02tags: [RSA,iOS]categories: [iOS]
+—RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
+由于iOS原生没有对rsa的支持，但有对openssl的支持
+在mac os x上使用命令生成公钥 私钥
+`openssl req -x509 -o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用gitcafe hexo搭建博客">
-<meta property="og:url" content="http://akuan.me/2015/12/01/hexo-setup/index.html">
+<meta property="og:title" content="阿宽的博客">
+<meta property="og:url" content="http://akuan.me/2015/12/01/ios-rsa/index.html">
 <meta property="og:site_name" content="阿宽的博客">
-<meta property="og:description" content="安装nvmwget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-或者
-wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-安装nodejsnvm install 5.1 5.1.x的稳定版本可以被安装，也可以换成其他稳定版">
-<meta property="og:image" content="http://7xoiw5.com1.z0.glb.clouddn.com/gitcafe.png">
-<meta property="og:image" content="http://7xoiw5.com1.z0.glb.clouddn.com/dnspodcname.png">
-<meta property="og:updated_time" content="2015-12-01T10:56:55.000Z">
+<meta property="og:description" content="title: ios rsadate: 2015-12-01 18:52:02tags: [RSA,iOS]categories: [iOS]
+—RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
+由于iOS原生没有对rsa的支持，但有对openssl的支持
+在mac os x上使用命令生成公钥 私钥
+`openssl req -x509 -o">
+<meta property="og:updated_time" content="2015-12-01T10:57:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用gitcafe hexo搭建博客">
-<meta name="twitter:description" content="安装nvmwget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-或者
-wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-安装nodejsnvm install 5.1 5.1.x的稳定版本可以被安装，也可以换成其他稳定版">
+<meta name="twitter:title" content="阿宽的博客">
+<meta name="twitter:description" content="title: ios rsadate: 2015-12-01 18:52:02tags: [RSA,iOS]categories: [iOS]
+—RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
+由于iOS原生没有对rsa的支持，但有对openssl的支持
+在mac os x上使用命令生成公钥 私钥
+`openssl req -x509 -o">
 
 
 
@@ -85,7 +86,7 @@ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
   };
 </script>
 
-  <title> 使用gitcafe hexo搭建博客 | 阿宽的博客 </title>
+  <title>  | 阿宽的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -215,7 +216,7 @@ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
             
             
               
-                使用gitcafe hexo搭建博客
+                
               
             
           </h1>
@@ -224,26 +225,11 @@ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-12-01T17:56:00+08:00" content="2015-12-01">
+            <time itemprop="dateCreated" datetime="2015-12-01T18:57:22+08:00" content="2015-12-01">
               2015-12-01
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -263,50 +249,42 @@ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
       
 
       
-        <span itemprop="articleBody"><h1 id="安装nvm">安装nvm</h1><p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
-<p>或者</p>
-<p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
-<h1 id="安装nodejs">安装nodejs</h1><p><code>nvm install 5.1</code> 5.1.x的稳定版本可以被安装，也可以换成其他稳定版</p>
-<p>启用nodejs</p>
-<p><code>nvm use 5.1</code> 对应你安装的</p>
-<h1 id="安装_Hexo">安装 Hexo</h1><p><code>npm install -g hexo-cli</code> </p>
-<p>初始化Hexo<br><code>hexo init &lt;folder&gt;</code><br><code>cd &lt;folder&gt;</code><br><code>npm install</code><br>当前目录结构应该为：<br>    .<br>    ├── _config.yml<br>    ├── package.json<br>    ├── scaffolds<br>    ├── scripts<br>    ├── source<br>    |   ├── _drafts<br>    |   └── _posts<br>    └── themes</p>
-<h1 id="配置_config-yml">配置_config.yml</h1><p>注意：<br>    1.修改配置文件时注意YAML语法，参数冒号:后一定要留空格<br>    2.中文乱码请修改文件编码格式为UTF-8<br>deploy 配置<br>    deploy:<br>    type: git<br>    repository: git@gitcafe.com:akuandev/akuandev.git<br>    branch: gitcafe-pages<br>需要在gitcafe 创建和用户名相同的仓库</p>
-<h1 id="域名设置：">域名设置：</h1><p>在gitcafe的项目设置中选择<code>page服务</code><br>添加自定义域名<br><img src="http://7xoiw5.com1.z0.glb.clouddn.com/gitcafe.png" alt=""></p>
-<h3 id="域名解析设置">域名解析设置</h3><p>我使用的是dnspod 域名cname到gitcafe.io 需要几分钟的时间生效<br><img src="http://7xoiw5.com1.z0.glb.clouddn.com/dnspodcname.png" alt=""></p>
-<p>添加文章：<br>hexo new “title”<br>修改产生的markdown 文件<br>清楚缓存 <code>hexo clean</code><br>生成文章信息 <code>hexo g</code><br>部署 <code>hexo d</code></p>
-<p>ps:<br>问题1:nvm 重启失效  原因nodejs版本没有设置</p>
-<p>查找node版本<br>    ➜ node –version<br>        v5.1.0<br>设置默认版本<br>    nvm alias default 5.1</p>
-<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo官方安装指引</a></p>
+        <span itemprop="articleBody"><p>title: ios rsa<br>date: 2015-12-01 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
+<p>—<a href="http://www.baike.com/wiki/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="external">RSA介绍</a><br>非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密</p>
+<p>由于iOS原生没有对rsa的支持，但有对openssl的支持</p>
+<p>在mac os x上使用命令生成公钥 私钥</p>
+<pre><code>`openssl req -x509 -out public_key<span class="class">.der</span> -outform der -new -newkey rsa:<span class="number">1024</span> -keyout private_key<span class="class">.pem</span> -days <span class="number">3650</span>`
+</code></pre><p>中间会提示输入一些信息，随意写吧</p>
+<p>在得到公钥私钥后还要进行一步转换 由于这样生成的私钥并非标准的 需要转换成pkcs8 否则服务器会无法使用私钥</p>
+<pre><code>`openssl pkcs8 -topk8 -<span class="keyword">in</span> private_key<span class="class">.pem</span> -out pkcs8_private<span class="class">.pem</span> -nocrypt`
+</code></pre><p>####客户端加密的过程</p>
+<pre><code><span class="number">1.</span>先用公钥加密
+<span class="number">2.</span>base64 编码
+<span class="number">3.</span>发送服务器
+</code></pre><p>ps：我们服务器端使用的java 测试可用</p>
+<p>证书的生成参考 <a href="http://www.cocoachina.com/bbs/read.php?tid=166990&amp;keyword=rsa%7Cjava" target="_blank" rel="external">cocoachina</a> 这篇文章</p>
+<p>客户端加密 使用了 <a href="https://github.com/xjunior/XRSA" target="_blank" rel="external">github 开源的一个xrsa</a></p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/blog/" rel="tag">#blog</a>
-          
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/11/21/cocoapods/" rel="next" title="unit tests with cocoapods">
-                <i class="fa fa-chevron-left"></i> unit tests with cocoapods
+              <a href="/2015/12/01/hexo-setup/" rel="next" title="使用gitcafe hexo搭建博客">
+                <i class="fa fa-chevron-left"></i> 使用gitcafe hexo搭建博客
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/01/ios-rsa/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2015/12/01/cocoapods-mirror/" rel="prev" title="cocoapods specs 镜像">
+                cocoapods specs 镜像 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -446,7 +424,7 @@ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装nvm"><span class="nav-number">1.</span> <span class="nav-text">安装nvm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装nodejs"><span class="nav-number">2.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装_Hexo"><span class="nav-number">3.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置_config-yml"><span class="nav-number">4.</span> <span class="nav-text">配置_config.yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#域名设置："><span class="nav-number">5.</span> <span class="nav-text">域名设置：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#域名解析设置"><span class="nav-number">5.0.1.</span> <span class="nav-text">域名解析设置</span></a></li></ol></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

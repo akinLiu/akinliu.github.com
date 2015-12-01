@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自由分享]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://akuan.me/"/>
-  <updated>2015-12-01T10:16:57.000Z</updated>
+  <updated>2015-12-01T11:12:51.000Z</updated>
   <id>http://akuan.me/</id>
   
   <author>
@@ -15,11 +15,69 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[cocoapods specs 镜像]]></title>
+    <link href="http://akuan.me/2015/12/01/cocoapods-mirror/"/>
+    <id>http://akuan.me/2015/12/01/cocoapods-mirror/</id>
+    <published>2015-12-01T10:58:02.000Z</published>
+    <updated>2015-12-01T11:12:51.000Z</updated>
+    <content type="html"><![CDATA[<p>在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在<a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">gitcafe</a> 和 <a href="http://git.oschina.net/akuandev/Specs.git" target="_blank" rel="external">oschina</a> 现在每10分钟会进行一次同步 基本和主仓库保持一致</p>
+<p>使用方法：</p>
+<pre><code>pod repo remove <span class="keyword">master</span>
+<span class="title">pod</span> repo add <span class="keyword">master</span> <span class="title">https</span>://gitcafe.com/akuandev/Specs.git
+pod repo update
+</code></pre><p>如果想用oschina的镜像也可以把第二条命令 换成 <code>http://git.oschina.net/akuandev/Specs.git</code> 即可</p>
+<p>第二条命令执行的时候会比较耗时 这个时候要去把整个specs仓库clone一下 大概60M左右</p>
+<p>如果你还没有使用过coacoapods 这里有一份安装的介绍 <a href="http://blog.devtang.com/blog/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">cocoapods 使用</a></p>
+<p>如果不想在pod install pod update的时候不想升级specs库 可以使用参数忽略掉 </p>
+<pre><code>pod install --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span>
+pod <span class="keyword">update</span> --<span class="keyword">verbose</span> --<span class="keyword">no</span>-repo-<span class="keyword">update</span>
+</code></pre><p>由于pod 新版本更新 会导致重复clone 一份pod文件下来，解决方法 <code>Podfile</code>第一行加入 source ‘<a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">https://gitcafe.com/akuandev/Specs.git</a>‘ </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在<a href="https://gitcafe.com/akuandev/Spec]]>
+    </summary>
+    
+      <category term="cocoapods" scheme="http://akuan.me/tags/cocoapods/"/>
+    
+      <category term="iOS" scheme="http://akuan.me/categories/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://akuan.me/2015/12/01/ios-rsa/"/>
+    <id>http://akuan.me/2015/12/01/ios-rsa/</id>
+    <published>2015-12-01T10:57:22.000Z</published>
+    <updated>2015-12-01T10:57:22.000Z</updated>
+    <content type="html"><![CDATA[<p>title: ios rsa<br>date: 2015-12-01 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
+<p>—<a href="http://www.baike.com/wiki/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="external">RSA介绍</a><br>非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密</p>
+<p>由于iOS原生没有对rsa的支持，但有对openssl的支持</p>
+<p>在mac os x上使用命令生成公钥 私钥</p>
+<pre><code>`openssl req -x509 -out public_key<span class="class">.der</span> -outform der -new -newkey rsa:<span class="number">1024</span> -keyout private_key<span class="class">.pem</span> -days <span class="number">3650</span>`
+</code></pre><p>中间会提示输入一些信息，随意写吧</p>
+<p>在得到公钥私钥后还要进行一步转换 由于这样生成的私钥并非标准的 需要转换成pkcs8 否则服务器会无法使用私钥</p>
+<pre><code>`openssl pkcs8 -topk8 -<span class="keyword">in</span> private_key<span class="class">.pem</span> -out pkcs8_private<span class="class">.pem</span> -nocrypt`
+</code></pre><p>####客户端加密的过程</p>
+<pre><code><span class="number">1.</span>先用公钥加密
+<span class="number">2.</span>base64 编码
+<span class="number">3.</span>发送服务器
+</code></pre><p>ps：我们服务器端使用的java 测试可用</p>
+<p>证书的生成参考 <a href="http://www.cocoachina.com/bbs/read.php?tid=166990&amp;keyword=rsa%7Cjava" target="_blank" rel="external">cocoachina</a> 这篇文章</p>
+<p>客户端加密 使用了 <a href="https://github.com/xjunior/XRSA" target="_blank" rel="external">github 开源的一个xrsa</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>title: ios rsa<br>date: 2015-12-01 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
+<p>—<a href="http://www.baike.com/wiki/RSA%E5%8A%]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[使用gitcafe hexo搭建博客]]></title>
     <link href="http://akuan.me/2015/12/01/hexo-setup/"/>
     <id>http://akuan.me/2015/12/01/hexo-setup/</id>
     <published>2015-12-01T09:56:00.000Z</published>
-    <updated>2015-12-01T10:16:57.000Z</updated>
+    <updated>2015-12-01T10:56:55.000Z</updated>
     <content type="html"><![CDATA[<h1 id="安装nvm">安装nvm</h1><p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
 <p>或者</p>
 <p><code>wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh</code></p>
@@ -46,27 +104,7 @@
     
       <category term="hexo" scheme="http://akuan.me/tags/hexo/"/>
     
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://akuan.me/2015/11/19/hello-world/"/>
-    <id>http://akuan.me/2015/11/19/hello-world/</id>
-    <published>2015-11-19T09:12:49.000Z</published>
-    <updated>2015-11-19T09:12:49.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
+      <category term="iOS" scheme="http://akuan.me/categories/iOS/"/>
     
   </entry>
   

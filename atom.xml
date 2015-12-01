@@ -4,7 +4,7 @@
   <subtitle><![CDATA[自由分享]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://akuan.me/"/>
-  <updated>2015-12-01T10:56:55.000Z</updated>
+  <updated>2015-12-01T11:51:38.000Z</updated>
   <id>http://akuan.me/</id>
   
   <author>
@@ -13,6 +13,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[directory not found]]></title>
+    <link href="http://akuan.me/2015/12/01/directory-not-found/"/>
+    <id>http://akuan.me/2015/12/01/directory-not-found/</id>
+    <published>2015-12-01T11:51:02.000Z</published>
+    <updated>2015-12-01T11:51:38.000Z</updated>
+    <content type="html"><![CDATA[<p>I’m getting these warning messages</p>
+<pre><code><span class="string">ld:</span> <span class="string">warning:</span> directory not found <span class="keyword">for</span> option <span class="string">'-F"/Users/...."'</span>
+</code></pre><p>I look into it and found this cause by a bug of xcode 5 whene the user adding new files of folders to the project.</p>
+<p>Xcode is modifying the ‘Library Search Paths’ build setting, and making a god-awful mess of it. Instead of adding $(SRCROOT)/ it is adding fully rooted paths to all new items, and adding random amounts of /// into other elements of the string. It also seems to be duplicating source paths in some instances, probably because it’s broken the existing ones, and thinks they need adding again.</p>
+<p>The solution:</p>
+<ol>
+<li>Copy out your Library Search Paths string into a text editor.</li>
+<li>Remove any fully rooted paths that shouldn’t be there, and replace them with the usual $(SRCROOT)/MyFiles/ type paths.</li>
+<li>Remove all extraneous slashes and make sure each path has a “ character at beginning and end to protect against spaces in filenames.</li>
+<li>Paste the edited string back into Build Settings.</li>
+<li>Clean, then Build. Should be back to normal.</li>
+</ol>
+<p>hope to help you!</p>
+<p>####source:<a href="http://stackoverflow.com/a/19831462/584254" target="_blank" rel="external">stackoverflow</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I’m getting these warning messages</p>
+<pre><code><span class="string">ld:</span> <span class="string">warning:</span> directory not foun]]>
+    </summary>
+    
+      <category term="iOS" scheme="http://akuan.me/tags/iOS/"/>
+    
+      <category term="xcode" scheme="http://akuan.me/tags/xcode/"/>
+    
+      <category term="xcode" scheme="http://akuan.me/categories/xcode/"/>
+    
+      <category term="iOS" scheme="http://akuan.me/categories/xcode/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[使用gitcafe hexo搭建博客]]></title>

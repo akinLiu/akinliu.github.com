@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="RSA,iOS," />
+  <meta name="keywords" content="iOS,xcode," />
 
 
 
@@ -55,25 +55,22 @@
 
 
 
-<meta name="description" content="RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
-由于iOS原生没有对rsa的支持，但有对openssl的支持
-在mac os x上使用命令生成公钥 私钥
-`openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.">
+<meta name="description" content="I’m getting these warning messages
+ld: warning: directory not found for option &apos;-F&quot;/Users/....&quot;&apos;
+I look into it and found this cause by a bug of xcode 5 whene the user adding new files of folders to t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS 中使用RSA加密">
-<meta property="og:url" content="http://akuan.me/2014/02/27/ios-rsa/index.html">
+<meta property="og:title" content="directory not found">
+<meta property="og:url" content="http://akuan.me/2015/12/01/directory-not-found/index.html">
 <meta property="og:site_name" content="阿宽的博客">
-<meta property="og:description" content="RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
-由于iOS原生没有对rsa的支持，但有对openssl的支持
-在mac os x上使用命令生成公钥 私钥
-`openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.">
-<meta property="og:updated_time" content="2015-12-01T11:47:44.000Z">
+<meta property="og:description" content="I’m getting these warning messages
+ld: warning: directory not found for option &apos;-F&quot;/Users/....&quot;&apos;
+I look into it and found this cause by a bug of xcode 5 whene the user adding new files of folders to t">
+<meta property="og:updated_time" content="2015-12-01T11:51:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 中使用RSA加密">
-<meta name="twitter:description" content="RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
-由于iOS原生没有对rsa的支持，但有对openssl的支持
-在mac os x上使用命令生成公钥 私钥
-`openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.">
+<meta name="twitter:title" content="directory not found">
+<meta name="twitter:description" content="I’m getting these warning messages
+ld: warning: directory not found for option &apos;-F&quot;/Users/....&quot;&apos;
+I look into it and found this cause by a bug of xcode 5 whene the user adding new files of folders to t">
 
 
 
@@ -85,7 +82,7 @@
   };
 </script>
 
-  <title> iOS 中使用RSA加密 | 阿宽的博客 </title>
+  <title> directory not found | 阿宽的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,7 +221,7 @@
             
             
               
-                iOS 中使用RSA加密
+                directory not found
               
             
           </h1>
@@ -233,8 +230,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2014-02-27T18:52:02+08:00" content="2014-02-27">
-              2014-02-27
+            <time itemprop="dateCreated" datetime="2015-12-01T19:51:02+08:00" content="2015-12-01">
+              2015-12-01
             </time>
           </span>
 
@@ -243,7 +240,19 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                  <a href="/categories/xcode/" itemprop="url" rel="index">
+                    <span itemprop="name">xcode</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/xcode/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
                 </span>
@@ -272,20 +281,20 @@
       
 
       
-        <span itemprop="articleBody"><p><a href="http://www.baike.com/wiki/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="external">RSA介绍</a><br>非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密</p>
-<p>由于iOS原生没有对rsa的支持，但有对openssl的支持</p>
-<p>在mac os x上使用命令生成公钥 私钥</p>
-<pre><code>`openssl req -x509 -out public_key<span class="class">.der</span> -outform der -new -newkey rsa:<span class="number">1024</span> -keyout private_key<span class="class">.pem</span> -days <span class="number">3650</span>`
-</code></pre><p>中间会提示输入一些信息，随意写吧</p>
-<p>在得到公钥私钥后还要进行一步转换 由于这样生成的私钥并非标准的 需要转换成pkcs8 否则服务器会无法使用私钥</p>
-<pre><code>`openssl pkcs8 -topk8 -<span class="keyword">in</span> private_key<span class="class">.pem</span> -out pkcs8_private<span class="class">.pem</span> -nocrypt`
-</code></pre><p>####客户端加密的过程</p>
-<pre><code><span class="number">1.</span>先用公钥加密
-<span class="number">2.</span>base64 编码
-<span class="number">3.</span>发送服务器
-</code></pre><p>ps：我们服务器端使用的java 测试可用</p>
-<p>证书的生成参考 <a href="http://www.cocoachina.com/bbs/read.php?tid=166990&amp;keyword=rsa%7Cjava" target="_blank" rel="external">cocoachina</a> 这篇文章</p>
-<p>客户端加密 使用了 <a href="https://github.com/xjunior/XRSA" target="_blank" rel="external">github 开源的一个xrsa</a></p>
+        <span itemprop="articleBody"><p>I’m getting these warning messages</p>
+<pre><code><span class="string">ld:</span> <span class="string">warning:</span> directory not found <span class="keyword">for</span> option <span class="string">'-F"/Users/...."'</span>
+</code></pre><p>I look into it and found this cause by a bug of xcode 5 whene the user adding new files of folders to the project.</p>
+<p>Xcode is modifying the ‘Library Search Paths’ build setting, and making a god-awful mess of it. Instead of adding $(SRCROOT)/ it is adding fully rooted paths to all new items, and adding random amounts of /// into other elements of the string. It also seems to be duplicating source paths in some instances, probably because it’s broken the existing ones, and thinks they need adding again.</p>
+<p>The solution:</p>
+<ol>
+<li>Copy out your Library Search Paths string into a text editor.</li>
+<li>Remove any fully rooted paths that shouldn’t be there, and replace them with the usual $(SRCROOT)/MyFiles/ type paths.</li>
+<li>Remove all extraneous slashes and make sure each path has a “ character at beginning and end to protect against spaces in filenames.</li>
+<li>Paste the edited string back into Build Settings.</li>
+<li>Clean, then Build. Should be back to normal.</li>
+</ol>
+<p>hope to help you!</p>
+<p>####source:<a href="http://stackoverflow.com/a/19831462/584254" target="_blank" rel="external">stackoverflow</a></p>
 </span>
       
     </div>
@@ -294,9 +303,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/RSA/" rel="tag">#RSA</a>
-          
             <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+            <a href="/tags/xcode/" rel="tag">#xcode</a>
           
         </div>
       
@@ -305,17 +314,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/11/21/cocoapods/" rel="next" title="unit tests with cocoapods">
-                <i class="fa fa-chevron-left"></i> unit tests with cocoapods
+              <a href="/2015/12/01/hexo-setup/" rel="next" title="使用gitcafe hexo搭建博客">
+                <i class="fa fa-chevron-left"></i> 使用gitcafe hexo搭建博客
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/05/03/cocoapods-mirror/" rel="prev" title="cocoapods specs 镜像">
-                cocoapods specs 镜像 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

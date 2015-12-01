@@ -223,6 +223,127 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/01/directory-not-found/" itemprop="url">
+                  directory not found
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-01T19:51:02+08:00" content="2015-12-01">
+              2015-12-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/xcode/" itemprop="url" rel="index">
+                    <span itemprop="name">xcode</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/xcode/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p>I’m getting these warning messages</p>
+<pre><code><span class="string">ld:</span> <span class="string">warning:</span> directory not found <span class="keyword">for</span> option <span class="string">'-F"/Users/...."'</span>
+</code></pre><p>I look into it and found this cause by a bug of xcode 5 whene the user adding new files of folders to the project.</p>
+<p>Xcode is modifying the ‘Library Search Paths’ build setting, and making a god-awful mess of it. Instead of adding $(SRCROOT)/ it is adding fully rooted paths to all new items, and adding random amounts of /// into other elements of the string. It also seems to be duplicating source paths in some instances, probably because it’s broken the existing ones, and thinks they need adding again.</p>
+<p>The solution:</p>
+<ol>
+<li>Copy out your Library Search Paths string into a text editor.</li>
+<li>Remove any fully rooted paths that shouldn’t be there, and replace them with the usual $(SRCROOT)/MyFiles/ type paths.</li>
+<li>Remove all extraneous slashes and make sure each path has a “ character at beginning and end to protect against spaces in filenames.</li>
+<li>Paste the edited string back into Build Settings.</li>
+<li>Clean, then Build. Should be back to normal.</li>
+</ol>
+<p>hope to help you!</p>
+<p>####source:<a href="http://stackoverflow.com/a/19831462/584254" target="_blank" rel="external">stackoverflow</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/12/01/hexo-setup/" itemprop="url">
                   使用gitcafe hexo搭建博客
                 </a>
@@ -657,21 +778,21 @@ pod <span class="keyword">update</span> --<span class="keyword">verbose</span> -
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

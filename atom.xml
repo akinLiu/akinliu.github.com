@@ -52,8 +52,8 @@
   
   <entry>
     <title><![CDATA[cocoapods specs 镜像]]></title>
-    <link href="http://akuan.me/2014/05/03/cocoapods-mirror/"/>
-    <id>http://akuan.me/2014/05/03/cocoapods-mirror/</id>
+    <link href="http://akuan.me/2014/05/03/cocoapods-specs-/"/>
+    <id>http://akuan.me/2014/05/03/cocoapods-specs-/</id>
     <published>2014-05-03T10:58:02.000Z</published>
     <updated>2015-12-01T11:14:22.000Z</updated>
     <content type="html"><![CDATA[<p>在使用cocoapods 进行update 或者 install的时候 每次回去更新获取的pod specs，每次速度都不是很理想，博主最近对github上的specs仓库进行了镜像，分别在<a href="https://gitcafe.com/akuandev/Specs.git" target="_blank" rel="external">gitcafe</a> 和 <a href="http://git.oschina.net/akuandev/Specs.git" target="_blank" rel="external">oschina</a> 现在每10分钟会进行一次同步 基本和主仓库保持一致</p>

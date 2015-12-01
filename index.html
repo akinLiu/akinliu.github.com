@@ -223,101 +223,6 @@
             
               
                 
-                <a class="post-title-link" href="/2015/12/01/ios-rsa/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-01T19:46:10+08:00" content="2015-12-01">
-              2015-12-01
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody">
-            
-              <p>title: “iOS 中使用RSA加密”<br>date: 2014-02-27 18:52:02<br>tags: [RSA,iOS]<br>categories: [iOS]</p>
-<p>—<a href="http://www.baike.com/wiki/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="external">RSA介绍</a><br>非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密</p>
-<p>由于iOS原生没有对rsa的支持，但有对openssl的支持</p>
-<p>在mac os x上使用命令生成公钥 私钥</p>
-<pre><code>`openssl req -x509 -out public_key<span class="class">.der</span> -outform der -new -newkey rsa:<span class="number">1024</span> -keyout private_key<span class="class">.pem</span> -days <span class="number">3650</span>`
-</code></pre><p>中间会提示输入一些信息，随意写吧</p>
-<p>在得到公钥私钥后还要进行一步转换 由于这样生成的私钥并非标准的 需要转换成pkcs8 否则服务器会无法使用私钥</p>
-<pre><code>`openssl pkcs8 -topk8 -<span class="keyword">in</span> private_key<span class="class">.pem</span> -out pkcs8_private<span class="class">.pem</span> -nocrypt`
-</code></pre><p>####客户端加密的过程</p>
-<pre><code><span class="number">1.</span>先用公钥加密
-<span class="number">2.</span>base64 编码
-<span class="number">3.</span>发送服务器
-</code></pre><p>ps：我们服务器端使用的java 测试可用</p>
-<p>证书的生成参考 <a href="http://www.cocoachina.com/bbs/read.php?tid=166990&amp;keyword=rsa%7Cjava" target="_blank" rel="external">cocoachina</a> 这篇文章</p>
-<p>客户端加密 使用了 <a href="https://github.com/xjunior/XRSA" target="_blank" rel="external">github 开源的一个xrsa</a></p>
-
-            
-          </span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2015/12/01/hexo-setup/" itemprop="url">
                   使用gitcafe hexo搭建博客
                 </a>
@@ -535,6 +440,115 @@ pod <span class="keyword">update</span> --<span class="keyword">verbose</span> -
             
               
                 
+                <a class="post-title-link" href="/2014/02/27/ios-rsa/" itemprop="url">
+                  iOS 中使用RSA加密
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2014-02-27T18:52:02+08:00" content="2014-02-27">
+              2014-02-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <p><a href="http://www.baike.com/wiki/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="external">RSA介绍</a><br>非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密</p>
+<p>由于iOS原生没有对rsa的支持，但有对openssl的支持</p>
+<p>在mac os x上使用命令生成公钥 私钥</p>
+<pre><code>`openssl req -x509 -out public_key<span class="class">.der</span> -outform der -new -newkey rsa:<span class="number">1024</span> -keyout private_key<span class="class">.pem</span> -days <span class="number">3650</span>`
+</code></pre><p>中间会提示输入一些信息，随意写吧</p>
+<p>在得到公钥私钥后还要进行一步转换 由于这样生成的私钥并非标准的 需要转换成pkcs8 否则服务器会无法使用私钥</p>
+<pre><code>`openssl pkcs8 -topk8 -<span class="keyword">in</span> private_key<span class="class">.pem</span> -out pkcs8_private<span class="class">.pem</span> -nocrypt`
+</code></pre><p>####客户端加密的过程</p>
+<pre><code><span class="number">1.</span>先用公钥加密
+<span class="number">2.</span>base64 编码
+<span class="number">3.</span>发送服务器
+</code></pre><p>ps：我们服务器端使用的java 测试可用</p>
+<p>证书的生成参考 <a href="http://www.cocoachina.com/bbs/read.php?tid=166990&amp;keyword=rsa%7Cjava" target="_blank" rel="external">cocoachina</a> 这篇文章</p>
+<p>客户端加密 使用了 <a href="https://github.com/xjunior/XRSA" target="_blank" rel="external">github 开源的一个xrsa</a></p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2013/11/21/cocoapods/" itemprop="url">
                   unit tests with cocoapods
                 </a>
@@ -657,7 +671,7 @@ pod <span class="keyword">update</span> --<span class="keyword">verbose</span> -
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>

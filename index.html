@@ -223,6 +223,107 @@
             
               
                 
+                <a class="post-title-link" href="/2015/12/08/tsung-分布式压力测试框架/" itemprop="url">
+                  tsung 分布式压力测试框架
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-08T17:18:05+08:00" content="2015-12-08">
+              2015-12-08
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody">
+            
+              <h1 id="Tsung_介绍">Tsung <a href="http://tsung.erlang-projects.org/user_manual/" target="_blank" rel="external">介绍</a></h1><p>一个开源的多协议分布式负载测试工具，使用erlang语言开发的。最大的亮点可以支持脚本录制，支持分布式的压测，生成优雅的报表</p>
+<h1 id="centos_下安装">centos 下安装</h1><h2 id="安装Tsung依赖库">安装Tsung依赖库</h2><ol>
+<li><code>yum -y install erlang perl perl-RRD-Simple.noarch perl-Log-Log4perl-RRDs.noarch gnuplot perl-Template-Toolkit firefox</code></li>
+</ol>
+<h2 id="下载Tsung">下载Tsung</h2><ol>
+<li>获取github上面Tsung最新版 <code>git clone https://github.com/processone/tsung.git</code> </li>
+<li>拷贝到服务器 <code>scp -P port -r tsung root@ip:/dir</code> 修改成需要的命令<h2 id="安装tsung">安装tsung</h2><code>./configure &amp;&amp; make &amp;&amp; make install</code></li>
+</ol>
+<h2 id="安装完成">安装完成</h2><p>tsung 被安装到 /usr/share/tsung/ 目录下<br>此目录下有很多示例 /usr/share/doc/tsung/examples</p>
+<h1 id="mac_os_下安装">mac os 下安装</h1><p>简单到哭 <code>brew install tsung</code> 一个命令即可<br>如果没有安装brew，运行 <code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br>运行 <code>tsung -f tsung.xml start</code></p>
+<h1 id="参考文章">参考文章</h1><ol>
+<li><a href="https://engineering.helpshift.com/2014/tsung/" target="_blank" rel="external">Load Testing using Tsung</a></li>
+<li><a href="http://www.jianshu.com/p/4977d6bf840f" target="_blank" rel="external">Tsung使用</a></li>
+<li><a href="http://tsung.erlang-projects.org/user_manual/installation.html" target="_blank" rel="external">官方指引</a> <a href="http://tsung.readthedocs.org/en/latest/installation.html" target="_blank" rel="external">readthedocs</a></li>
+<li><a href="http://blog.csbzy.com/2015/11/06/tsung%E5%8E%8B%E6%B5%8Brestful%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" rel="external">tsung压测restful服务器</a></li>
+<li><a href="http://nonfu.me/p/11718.html" target="_blank" rel="external">如何生成每秒百万级别的 HTTP 请求</a></li>
+<li><a href="http://docs.basho.com/riak/latest/ops/building/installing/erlang/#RHEL-CentOS-Prerequisites" target="_blank" rel="external">源码安装erlang</a></li>
+<li><a href="https://github.com/qiwsir/ITArticles/blob/master/Linux/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7tsung.md" target="_blank" rel="external">压力测试工具tsung</a></li>
+</ol>
+<h1 id="测试图表格">测试图表格</h1><p>/usr/lib/tsung/bin/tsung_stats.pl 运行此命令生成可视化数据<br>python -m SimpleHTTPServer 8000 开启简单的server服务<br>通过ip打开 查看数据</p>
+<h1 id="ps:">ps:</h1><p>hostname 不能使用带有特殊字符的<br>每个机器之间要可以ssh 无密码访问，第一次使用需要ssh手动登陆下 否则可能会导致slave 无法正常启动</p>
+
+            
+          </span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2015/12/01/hexo-setup/" itemprop="url">
                   使用gitcafe hexo搭建博客
                 </a>
@@ -778,7 +879,7 @@ pod <span class="keyword">update</span> --<span class="keyword">verbose</span> -
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

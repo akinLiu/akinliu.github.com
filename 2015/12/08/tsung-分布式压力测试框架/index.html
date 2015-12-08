@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="RSA,iOS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -55,25 +55,22 @@
 
 
 
-<meta name="description" content="RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
-由于iOS原生没有对rsa的支持，但有对openssl的支持
-在mac os x上使用命令生成公钥 私钥
-`openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.">
+<meta name="description" content="Tsung 介绍一个开源的多协议分布式负载测试工具，使用erlang语言开发的。最大的亮点可以支持脚本录制，支持分布式的压测，生成优雅的报表
+centos 下安装安装Tsung依赖库
+yum -y install erlang perl perl-RRD-Simple.noarch perl-Log-Log4perl-RRDs.noarch gnuplot perl-Template-Toolki">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS 中使用RSA加密">
-<meta property="og:url" content="http://akuan.me/2014/02/27/ios-rsa/index.html">
+<meta property="og:title" content="tsung 分布式压力测试框架">
+<meta property="og:url" content="http://akuan.me/2015/12/08/tsung-分布式压力测试框架/index.html">
 <meta property="og:site_name" content="阿宽的博客">
-<meta property="og:description" content="RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
-由于iOS原生没有对rsa的支持，但有对openssl的支持
-在mac os x上使用命令生成公钥 私钥
-`openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.">
-<meta property="og:updated_time" content="2015-12-01T11:47:44.000Z">
+<meta property="og:description" content="Tsung 介绍一个开源的多协议分布式负载测试工具，使用erlang语言开发的。最大的亮点可以支持脚本录制，支持分布式的压测，生成优雅的报表
+centos 下安装安装Tsung依赖库
+yum -y install erlang perl perl-RRD-Simple.noarch perl-Log-Log4perl-RRDs.noarch gnuplot perl-Template-Toolki">
+<meta property="og:updated_time" content="2015-12-08T09:27:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 中使用RSA加密">
-<meta name="twitter:description" content="RSA介绍非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密
-由于iOS原生没有对rsa的支持，但有对openssl的支持
-在mac os x上使用命令生成公钥 私钥
-`openssl req -x509 -out public_key.der -outform der -new -newkey rsa:1024 -keyout private_key.">
+<meta name="twitter:title" content="tsung 分布式压力测试框架">
+<meta name="twitter:description" content="Tsung 介绍一个开源的多协议分布式负载测试工具，使用erlang语言开发的。最大的亮点可以支持脚本录制，支持分布式的压测，生成优雅的报表
+centos 下安装安装Tsung依赖库
+yum -y install erlang perl perl-RRD-Simple.noarch perl-Log-Log4perl-RRDs.noarch gnuplot perl-Template-Toolki">
 
 
 
@@ -85,7 +82,7 @@
   };
 </script>
 
-  <title> iOS 中使用RSA加密 | 阿宽的博客 </title>
+  <title> tsung 分布式压力测试框架 | 阿宽的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,7 +221,7 @@
             
             
               
-                iOS 中使用RSA加密
+                tsung 分布式压力测试框架
               
             
           </h1>
@@ -233,26 +230,11 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2014-02-27T18:52:02+08:00" content="2014-02-27">
-              2014-02-27
+            <time itemprop="dateCreated" datetime="2015-12-08T17:18:05+08:00" content="2015-12-08">
+              2015-12-08
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -272,50 +254,45 @@
       
 
       
-        <span itemprop="articleBody"><p><a href="http://www.baike.com/wiki/RSA%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95" target="_blank" rel="external">RSA介绍</a><br>非对称加密 比较适合客户端进行密码的加密后提交给服务器 客户端使用公钥加密 客户端使用私钥解密</p>
-<p>由于iOS原生没有对rsa的支持，但有对openssl的支持</p>
-<p>在mac os x上使用命令生成公钥 私钥</p>
-<pre><code>`openssl req -x509 -out public_key<span class="class">.der</span> -outform der -new -newkey rsa:<span class="number">1024</span> -keyout private_key<span class="class">.pem</span> -days <span class="number">3650</span>`
-</code></pre><p>中间会提示输入一些信息，随意写吧</p>
-<p>在得到公钥私钥后还要进行一步转换 由于这样生成的私钥并非标准的 需要转换成pkcs8 否则服务器会无法使用私钥</p>
-<pre><code>`openssl pkcs8 -topk8 -<span class="keyword">in</span> private_key<span class="class">.pem</span> -out pkcs8_private<span class="class">.pem</span> -nocrypt`
-</code></pre><p>####客户端加密的过程</p>
-<pre><code><span class="number">1.</span>先用公钥加密
-<span class="number">2.</span>base64 编码
-<span class="number">3.</span>发送服务器
-</code></pre><p>ps：我们服务器端使用的java 测试可用</p>
-<p>证书的生成参考 <a href="http://www.cocoachina.com/bbs/read.php?tid=166990&amp;keyword=rsa%7Cjava" target="_blank" rel="external">cocoachina</a> 这篇文章</p>
-<p>客户端加密 使用了 <a href="https://github.com/xjunior/XRSA" target="_blank" rel="external">github 开源的一个xrsa</a></p>
+        <span itemprop="articleBody"><h1 id="Tsung_介绍">Tsung <a href="http://tsung.erlang-projects.org/user_manual/" target="_blank" rel="external">介绍</a></h1><p>一个开源的多协议分布式负载测试工具，使用erlang语言开发的。最大的亮点可以支持脚本录制，支持分布式的压测，生成优雅的报表</p>
+<h1 id="centos_下安装">centos 下安装</h1><h2 id="安装Tsung依赖库">安装Tsung依赖库</h2><ol>
+<li><code>yum -y install erlang perl perl-RRD-Simple.noarch perl-Log-Log4perl-RRDs.noarch gnuplot perl-Template-Toolkit firefox</code></li>
+</ol>
+<h2 id="下载Tsung">下载Tsung</h2><ol>
+<li>获取github上面Tsung最新版 <code>git clone https://github.com/processone/tsung.git</code> </li>
+<li>拷贝到服务器 <code>scp -P port -r tsung root@ip:/dir</code> 修改成需要的命令<h2 id="安装tsung">安装tsung</h2><code>./configure &amp;&amp; make &amp;&amp; make install</code></li>
+</ol>
+<h2 id="安装完成">安装完成</h2><p>tsung 被安装到 /usr/share/tsung/ 目录下<br>此目录下有很多示例 /usr/share/doc/tsung/examples</p>
+<h1 id="mac_os_下安装">mac os 下安装</h1><p>简单到哭 <code>brew install tsung</code> 一个命令即可<br>如果没有安装brew，运行 <code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code><br>运行 <code>tsung -f tsung.xml start</code></p>
+<h1 id="参考文章">参考文章</h1><ol>
+<li><a href="https://engineering.helpshift.com/2014/tsung/" target="_blank" rel="external">Load Testing using Tsung</a></li>
+<li><a href="http://www.jianshu.com/p/4977d6bf840f" target="_blank" rel="external">Tsung使用</a></li>
+<li><a href="http://tsung.erlang-projects.org/user_manual/installation.html" target="_blank" rel="external">官方指引</a> <a href="http://tsung.readthedocs.org/en/latest/installation.html" target="_blank" rel="external">readthedocs</a></li>
+<li><a href="http://blog.csbzy.com/2015/11/06/tsung%E5%8E%8B%E6%B5%8Brestful%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_blank" rel="external">tsung压测restful服务器</a></li>
+<li><a href="http://nonfu.me/p/11718.html" target="_blank" rel="external">如何生成每秒百万级别的 HTTP 请求</a></li>
+<li><a href="http://docs.basho.com/riak/latest/ops/building/installing/erlang/#RHEL-CentOS-Prerequisites" target="_blank" rel="external">源码安装erlang</a></li>
+<li><a href="https://github.com/qiwsir/ITArticles/blob/master/Linux/%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7tsung.md" target="_blank" rel="external">压力测试工具tsung</a></li>
+</ol>
+<h1 id="测试图表格">测试图表格</h1><p>/usr/lib/tsung/bin/tsung_stats.pl 运行此命令生成可视化数据<br>python -m SimpleHTTPServer 8000 开启简单的server服务<br>通过ip打开 查看数据</p>
+<h1 id="ps:">ps:</h1><p>hostname 不能使用带有特殊字符的<br>每个机器之间要可以ssh 无密码访问，第一次使用需要ssh手动登陆下 否则可能会导致slave 无法正常启动</p>
 </span>
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/RSA/" rel="tag">#RSA</a>
-          
-            <a href="/tags/iOS/" rel="tag">#iOS</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2013/12/04/directory-not-found/" rel="next" title="directory not found">
-                <i class="fa fa-chevron-left"></i> directory not found
+              <a href="/2015/12/01/hexo-setup/" rel="next" title="使用gitcafe hexo搭建博客">
+                <i class="fa fa-chevron-left"></i> 使用gitcafe hexo搭建博客
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2014/05/03/cocoapods-specs-/" rel="prev" title="cocoapods specs 镜像">
-                cocoapods specs 镜像 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -454,7 +431,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Tsung_介绍"><span class="nav-number">1.</span> <span class="nav-text">Tsung 介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#centos_下安装"><span class="nav-number">2.</span> <span class="nav-text">centos 下安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Tsung依赖库"><span class="nav-number">2.1.</span> <span class="nav-text">安装Tsung依赖库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载Tsung"><span class="nav-number">2.2.</span> <span class="nav-text">下载Tsung</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装tsung"><span class="nav-number">2.3.</span> <span class="nav-text">安装tsung</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装完成"><span class="nav-number">2.4.</span> <span class="nav-text">安装完成</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mac_os_下安装"><span class="nav-number">3.</span> <span class="nav-text">mac os 下安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试图表格"><span class="nav-number">5.</span> <span class="nav-text">测试图表格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ps:"><span class="nav-number">6.</span> <span class="nav-text">ps:</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
